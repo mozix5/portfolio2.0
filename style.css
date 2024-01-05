@@ -1,0 +1,56 @@
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    font-family: 'Bauziet Variable',sans-serif;
+}
+:root{
+    --scroll:0;
+}
+p{
+    font-size: 28px;
+    margin: 1em;
+}
+.full-screen{
+    height: 100vh;
+    /* width: 100vw; */
+    /* background-color: blue; */
+}
+.left{
+    background-color: #f8faf9;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 80px;
+    width: 50%;
+
+}
+.heading{
+    font-size: 110px;
+    font-weight: 560;
+}
+.right{
+    height: 100%;
+    flex: 1;
+    /* background-color: #989D9D; */
+    background: linear-gradient(
+    210.65deg,
+    rgb(152, 157, 157, var(--background-opacity)) 0%,
+    rgb(189, 194, 194, var(--background-opacity)) 100%
+  );
+}
+.top-section{
+    display: flex;
+    position: sticky;
+    top: 0;
+    translate: 0 calc(-1% * (max(var(--scroll),25) - 25) * 100 /75);
+  /* (oldVal - oldMin) * newRange / oldRange + newMin */
+    --background-opacity: calc(100%-1% * min(var(--scroll),30) * 100 /30);
+
+}
+.first-page {
+    padding-top: 1em;
+    text-align: center;
+    background-color: #e6e9ea;
+}
